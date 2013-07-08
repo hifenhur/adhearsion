@@ -4,10 +4,11 @@ class Home < Adhearsion::CallController
 
   def run
     answer
+    criar_som("Digite o código de usuário", 'codigo-usuario')
+    criar_som("Menu principal", 'menu-principal')
+    codigo = ask 'codigo-usuario', :timeout => 10, :limit => 1
 
-    codigo = ask 'codigo-usuario', :timeout => 10, :limit => 5
-
-    u = User.find(codigo.result.to_i)
+    u = User.find(codigo.response.to_i)
     username_file = "ola-#{u.nome.parameterize}"
     criar_som("Olá, #{u.nome}", username_file)
     play username_file
