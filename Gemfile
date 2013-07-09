@@ -21,6 +21,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'devise'
 gem "adhearsion", "~> 2.3"
 gem 'tts'

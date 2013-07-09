@@ -14,7 +14,7 @@
 #
 development:
   adapter: postgresql
-  host: 192.168.1.11
+  host: 192.168.1.16
   encoding: unicode
   database: parqrcode
   pool: 5

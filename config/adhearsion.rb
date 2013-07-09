@@ -33,7 +33,7 @@ Adhearsion.config do |config|
    config.punchblock.platform = :asterisk # Use Asterisk
    config.punchblock.username = "myuser" # Your AMI username
    config.punchblock.password = "mypassword" # Your AMI password
-   config.punchblock.host = "127.0.0.1" # Your AMI host
+   config.punchblock.host = "200.98.128.101" # Your AMI host
    
 
   ##
@@ -62,11 +62,11 @@ end
 
 Adhearsion.router do
 
-#  openended do
-#    route 'ConsoleCatch' do
-#      logger.info "Call #{call.id} waiting..."
-#    end
-#  end
+  #openended do
+  #  route 'ConsoleCatch' do
+  #    logger.info "Call #{call.id} waiting..."
+  #  end
+  #end
   route 'default', Home
 end
 
