@@ -1,0 +1,1239 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (8.7ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (39.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (3.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (18.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20130707030658)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "sobrenome" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130707030658')[0m
+  [1m[35m (4.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130707030658)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (104.2ms)[0m  INSERT INTO "users" ("created_at", "nome", "sobrenome", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 08 Jul 2013 12:11:41 UTC +00:00], ["nome", "Ben-Hur Batista Oliveira"], ["sobrenome", nil], ["updated_at", Mon, 08 Jul 2013 12:11:41 UTC +00:00]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (5.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Connecting to database specified by database.yml
+  [1m[36mClient Load (89.8ms)[0m  [1mSELECT "client".* FROM "client" LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (109.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mCreditCard Load (61.8ms)[0m  [1mSELECT "credit_cards".* FROM "credit_cards" INNER JOIN "client" ON "credit_cards"."id_client" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mTotalAmount Load (105.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Connecting to database specified by database.yml
+  [1m[36mUser Load (10.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (17.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTotalAmount Load (2.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTotalAmount Load (1.2ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (17.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTotalAmount Load (1.0ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (216.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTotalAmount Load (77.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTotalAmount Load (1.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mTotalAmount Load (1.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" IS NULL LIMIT 1
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (4.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTotalAmount Load (2.7ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 0]]
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 24]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 63]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 63]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 63]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mUser Load (15.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_user" = 1 LIMIT 1
+PG::Error: ERROR:  column users.id_user does not exist
+LINE 1: SELECT  "users".* FROM "users"  WHERE "users"."id_user" = 1 ...
+                                              ^
+: SELECT  "users".* FROM "users"  WHERE "users"."id_user" = 1 LIMIT 1
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 55 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 42 LIMIT 1
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 42 LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 42 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTotalAmount Load (2.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (3.5ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mTotalAmount Load (4.2ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTotalAmount Load (1.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (2.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTotalAmount Load (2.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" IS NULL LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (192.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mEXPLAIN (24.5ms)[0m  EXPLAIN SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (29.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (127.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTotalAmount Load (1.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTotalAmount Load (1.3ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" IS NULL LIMIT 1
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" IS NULL LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTotalAmount Load (1.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mTotalAmount Load (1.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 3 LIMIT 1
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 3 LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 3 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 3 LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (8.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTotalAmount Load (2.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mTotalAmount Load (1.3ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 3 LIMIT 1[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 3 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTotalAmount Load (2.7ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (201.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (136.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (7.9ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.1ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (4.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (4.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (4.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (9.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (3.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mUser Load (4.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mTotalAmount Load (3.2ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (4.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (5.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (3.8ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (3.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mTotalAmount Load (1.9ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mTotalAmount Load (3.5ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.1ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (180.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mEXPLAIN (13.4ms)[0m  EXPLAIN SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mTotalAmount Load (110.3ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (4.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mTotalAmount Load (2.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (239.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (255.2ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" 
+PG::Error: ERROR:  relation "phones" does not exist
+LINE 5:              WHERE a.attrelid = '"phones"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"phones"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mClient Load (55.0ms)[0m  SELECT "client".* FROM "client" LIMIT 1
+  [1m[36mClient Load (1.6ms)[0m  [1mSELECT "client".* FROM "client" LIMIT 1[0m
+  [1m[35mPhone Load (134.2ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."client_id" = 1
+PG::Error: ERROR:  column phone.client_id does not exist
+LINE 1: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 1
+                                             ^
+: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 1
+  [1m[36mClient Load (16.6ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+DEPRECATION WARNING: You're trying to create an attribute `client_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from __pry__ at (pry):7)
+  [1m[36mSQL (279.9ms)[0m  [1mINSERT INTO "phone" ("id_client", "imei", "phone") VALUES ($1, $2, $3) RETURNING "id_phone"[0m  [["id_client", nil], ["imei", nil], ["phone", "6232482393"]]
+  [1m[35m (90.8ms)[0m  COMMIT
+  [1m[36mPhone Load (1.0ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."client_id" = 3[0m
+PG::Error: ERROR:  column phone.client_id does not exist
+LINE 1: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 3
+                                             ^
+: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 3
+  [1m[35mClient Load (1.3ms)[0m  SELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1
+  [1m[36mPhone Load (1.0ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."client_id" = 3[0m
+PG::Error: ERROR:  column phone.client_id does not exist
+LINE 1: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 3
+                                             ^
+: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 3
+  [1m[35mPhone Load (11.7ms)[0m  SELECT "phone".* FROM "phone" LIMIT 1
+  [1m[36mPhone Load (1.4ms)[0m  [1mSELECT "phone".* FROM "phone" LIMIT 1[0m
+  [1m[35mPhone Load (1.3ms)[0m  SELECT "phone".* FROM "phone" LIMIT 1
+  [1m[36mClient Load (0.9ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+DEPRECATION WARNING: You're trying to create an attribute `client_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from __pry__ at (pry):11)
+  [1m[35mPhone Load (1.3ms)[0m  SELECT "phone".* FROM "phone" LIMIT 1
+  [1m[36mPhone Load (1.3ms)[0m  [1mSELECT "phone".* FROM "phone" LIMIT 1[0m
+  [1m[35mClient Load (1.3ms)[0m  SELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1
+DEPRECATION WARNING: You're trying to create an attribute `client_id'. Writing arbitrary attributes on a model is deprecated. Please just use `attr_writer` etc. (called from __pry__ at (pry):14)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mClient Load (1.3ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+  [1m[35mPhone Load (0.9ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."client_id" = 3
+PG::Error: ERROR:  column phone.client_id does not exist
+LINE 1: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 3
+                                             ^
+: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 3
+  [1m[36mClient Load (1.3ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+  [1m[35mPhone Load (0.9ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."client_id" = 3
+PG::Error: ERROR:  column phone.client_id does not exist
+LINE 1: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 3
+                                             ^
+: SELECT "phone".* FROM "phone"  WHERE "phone"."client_id" = 3
+  [1m[36mClient Load (1.2ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+  [1m[35mPhone Load (1.0ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."client_id" = 3 LIMIT 1
+PG::Error: ERROR:  column phone.client_id does not exist
+LINE 1: SELECT  "phone".* FROM "phone"  WHERE "phone"."client_id" = ...
+                                              ^
+: SELECT  "phone".* FROM "phone"  WHERE "phone"."client_id" = 3 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mClient Load (1.9ms)[0m  [1mSELECT "client".* FROM "client" LIMIT 1[0m
+  [1m[35mPhone Load (1.7ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."id_client" = 1
+  [1m[36mClient Load (1.6ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+  [1m[35mPhone Load (0.8ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."id_client" = 3
+  [1m[36mPhone Load (1.2ms)[0m  [1mSELECT "phone".* FROM "phone" LIMIT 1[0m
+  [1m[35mPhone Load (1.3ms)[0m  SELECT "phone".* FROM "phone" LIMIT 1
+  [1m[36mClient Load (1.5ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (346.8ms)[0m  [1mUPDATE "phone" SET "id_client" = 3 WHERE "phone"."id_phone" = 1[0m
+  [1m[35m (37.6ms)[0m  COMMIT
+  [1m[36mClient Load (1.4ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+  [1m[35mPhone Load (0.9ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."id_client" = 3
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (191.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mEXPLAIN (23.7ms)[0m  EXPLAIN SELECT "users".* FROM "users" LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (168.4ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (146.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (7.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (259.4ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mEXPLAIN (27.8ms)[0m  [1mEXPLAIN SELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mUser Load (8.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (1.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mTotalAmount Load (228.8ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mTotalAmount Load (6.9ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (17.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (192.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mEXPLAIN (27.5ms)[0m  EXPLAIN SELECT "users".* FROM "users" LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (152.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mClient Load (2.5ms)[0m  [1mSELECT "client".* FROM "client" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 1 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (231.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mEXPLAIN (25.9ms)[0m  EXPLAIN SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mTotalAmount Load (110.9ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mTotalAmount Load (2.0ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mTotalAmount Load (1.7ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (3.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mUser Load (201.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+PG::Error: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: SELECT  "users".* FROM "users"  LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mUser Load (291.3ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mEXPLAIN (13.9ms)[0m  EXPLAIN SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (126.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (102.0ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '62, 3242, 7098' LIMIT 1[0m
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mTotalAmount Load (2.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (1.7ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '62, 3242, 7098' LIMIT 1[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mTotalAmount Load (3.9ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1[0m
+  [1m[35mPhone Load (1.8ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '62, 3242, 7098' LIMIT 1
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mTotalAmount Load (2.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 2 LIMIT 1
+  [1m[36mClient Load (1.9ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+  [1m[35mClient Load (1.3ms)[0m  SELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1
+  [1m[36mTotalAmount Load (1.8ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 4 LIMIT 1[0m
+  [1m[35mClient Load (1.3ms)[0m  SELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1
+  [1m[36mTotalAmount Load (0.8ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (36.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTotalAmount Load (1.1ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 1 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (35.8ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '62, 3242, 7098' LIMIT 1[0m
+  [1m[35mPhone Load (28.3ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '62, 3242, 7098' LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (25.0ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mPhone Load (25.8ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+  [1m[36mPhone Load (24.5ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (25.4ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098'[0m
+  [1m[35mPhone Load (24.4ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (25.0ms)[0m  [1mSELECT "phone".* FROM "phone" LIMIT 1[0m
+  [1m[35mPhone Load (24.3ms)[0m  SELECT "phone".* FROM "phone" LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (25.3ms)[0m  [1mSELECT "phone".* FROM "phone" LIMIT 1[0m
+  [1m[35mClient Load (24.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mPhone Load (26.0ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (24.2ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mPhone Load (24.8ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '623242798' LIMIT 1[0m
+  [1m[35mPhone Load (24.5ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '623242798' LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (25.4ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (24.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (28.7ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (28.5ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mUser Load (28.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 9 LIMIT 1[0m
+  [1m[35mTotalAmount Load (29.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mPhone Load (24.9ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (24.7ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mUser Load (25.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 9 LIMIT 1[0m
+  [1m[35mTotalAmount Load (25.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[35mPhone Load (1069157.2ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098'
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (28.4ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mUser Load (28.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 9 LIMIT 1[0m
+  [1m[35mTotalAmount Load (28.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 9 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (25.1ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (24.5ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mUser Load (25.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 9 LIMIT 1[0m
+  [1m[35mTotalAmount Load (24.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 9 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (28.9ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (28.6ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mUser Load (29.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 9 LIMIT 1[0m
+  [1m[35mTotalAmount Load (28.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 9 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (25.0ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (24.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mUser Load (25.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 9 LIMIT 1[0m
+  [1m[35mTotalAmount Load (24.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mPhone Load (24.7ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (24.0ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mUser Load (24.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 9 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (24.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (24.5ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mUser Load (24.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 9 LIMIT 1[0m
+  [1m[35mTotalAmount Load (25.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 9 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (25.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (25.3ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 9 LIMIT 1
+  [1m[36mUser Load (25.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 9 LIMIT 1[0m
+  [1m[35mTotalAmount Load (25.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 9 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.7ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (28.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (29.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.5ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (28.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (29.1ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36m (28.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (28.0ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.9ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (29.1ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (29.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36m (28.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (28.5ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (30.1ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (28.9ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (28.7ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (28.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (29.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36m (31.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (34.4ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (42.4ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (29.3ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (28.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.6ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (29.3ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (29.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mPhone Load (28.5ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (28.1ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (31.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (28.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (28.6ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (28.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.7ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (28.4ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (36.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (28.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (28.8ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (29.2ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (28.7ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1[0m
+  [1m[35m (28.4ms)[0m  BEGIN
+  [1m[36mSQL (144.6ms)[0m  [1mINSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Mon, 22 Jul 2013 17:59:50 UTC +00:00], ["status", "check-in"], ["updated_at", Mon, 22 Jul 2013 17:59:50 UTC +00:00], ["vaga", #<Adhearsion::CallController::Input::Result response="21", status=:terminated>]]
+Celluloid::NotActorError: not in actor scope: INSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+  [1m[35m (28.8ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (36.0ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (30.4ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (28.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.6ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (28.5ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mClient Load (28.9ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.9ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (29.3ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (30.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (30.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mPhone Load (28.7ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (28.7ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (31.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (29.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (28.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (33.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (29.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mClient Load (28.3ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35m (28.6ms)[0m  BEGIN
+  [1m[36mTotalAmount Load (28.8ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1[0m
+  [1m[35mSQL (67.4ms)[0m  INSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Mon, 22 Jul 2013 18:07:43 UTC +00:00], ["status", "check-in"], ["updated_at", Mon, 22 Jul 2013 18:07:43 UTC +00:00], ["vaga", #<Adhearsion::CallController::Input::Result response="5", status=:terminated>]]
+Celluloid::NotActorError: not in actor scope: INSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+  [1m[36m (28.8ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.4ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (28.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (28.6ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mClient Load (28.5ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35m (28.3ms)[0m  BEGIN
+  [1m[36mTotalAmount Load (27.9ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1[0m
+  [1m[35mSQL (69.7ms)[0m  INSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Mon, 22 Jul 2013 18:09:13 UTC +00:00], ["status", "check-in"], ["updated_at", Mon, 22 Jul 2013 18:09:13 UTC +00:00], ["vaga", #<Adhearsion::CallController::Input::Result response="24", status=:terminated>]]
+Celluloid::NotActorError: not in actor scope: INSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+  [1m[36m (27.7ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (39.6ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (29.9ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (35.1ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mClient Load (28.3ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35m (28.2ms)[0m  BEGIN
+  [1m[36m (28.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mClient Load (29.6ms)[0m  SELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1
+  [1m[36m (28.1ms)[0m  [1mBEGIN[0m
+  [1m[35mTotalAmount Load (29.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1
+  [1m[36mSQL (118.1ms)[0m  [1mINSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Mon, 22 Jul 2013 18:18:01 UTC +00:00], ["status", nil], ["updated_at", Mon, 22 Jul 2013 18:18:01 UTC +00:00], ["vaga", nil]]
+  [1m[35m (28.7ms)[0m  COMMIT
+  [1m[36mClient Load (28.9ms)[0m  [1mSELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1[0m
+  [1m[35mClient Load (28.4ms)[0m  SELECT "client".* FROM "client" ORDER BY "client"."id_client" DESC LIMIT 1
+  [1m[36mParkingValidation Load (28.3ms)[0m  [1mSELECT "parking_validations".* FROM "parking_validations" WHERE "parking_validations"."client_id" = 19[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (29.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (29.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (29.1ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mClient Load (28.2ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (28.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1
+  [1m[36m (28.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (93.9ms)[0m  INSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Mon, 22 Jul 2013 18:21:48 UTC +00:00], ["status", "check-in"], ["updated_at", Mon, 22 Jul 2013 18:21:48 UTC +00:00], ["vaga", "1"]]
+  [1m[36m (28.3ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.6ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (52.2ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (53.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mPhone Load (52.9ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (51.3ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (51.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (51.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mPhone Load (53.8ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (52.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (52.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'sip-phone' LIMIT 1[0m
+  [1m[35mClient Load (51.6ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (52.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (53.7ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (51.6ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232428398' LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (53.1ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232428398' LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.4ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232428398' LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.5ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (52.4ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (52.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.6ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (52.1ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (52.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.8ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (52.1ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (52.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mClient Load (51.6ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (51.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1
+  [1m[36m (51.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (163.2ms)[0m  INSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Wed, 24 Jul 2013 14:12:59 UTC +00:00], ["status", "check-in"], ["updated_at", Wed, 24 Jul 2013 14:12:59 UTC +00:00], ["vaga", "4887"]]
+  [1m[36m (53.1ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.9ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (52.6ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (52.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (39.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (38.1ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (38.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mPhone Load (52.3ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+  [1m[36mClient Load (51.9ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mUser Load (52.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (52.5ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.4ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (52.1ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (57.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.4ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mClient Load (51.8ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (51.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1
+  [1m[36m (51.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (445.5ms)[0m  INSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Wed, 24 Jul 2013 14:28:28 UTC +00:00], ["status", "check-in"], ["updated_at", Wed, 24 Jul 2013 14:28:28 UTC +00:00], ["vaga", "123456789"]]
+  [1m[36m (51.7ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.1ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (61.5ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (51.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (50.8ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mPhone Load (53.1ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (52.5ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (51.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.5ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (39.1ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (38.1ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (38.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (43.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (42.5ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (42.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (35.5ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (35.9ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (35.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mPhone Load (48.3ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+  [1m[36mClient Load (47.4ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mUser Load (48.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (47.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mPhone Load (51.4ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+  [1m[36mClient Load (50.1ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mUser Load (50.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (51.5ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mClient Load (50.9ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (50.6ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1[0m
+  [1m[35m (51.3ms)[0m  BEGIN
+  [1m[36mSQL (208.7ms)[0m  [1mINSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Wed, 24 Jul 2013 14:50:03 UTC +00:00], ["status", "check-in"], ["updated_at", Wed, 24 Jul 2013 14:50:03 UTC +00:00], ["vaga", "986532"]]
+  [1m[35m (51.7ms)[0m  COMMIT
+  [1m[36mPhone Load (52.7ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (51.4ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (51.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.0ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mPhone Load (52.4ms)[0m  [1mSELECT "phone".*Connecting to database specified by database.yml
+  [1m[36mPhone Load (50.3ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (49.9ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (50.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mPhone Load (53.5ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+  [1m[36mClient Load (52.3ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mUser Load (53.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (39.2ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (38.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (39.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (38.3ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mClient Load (36.2ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (35.9ms)[0m  SELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1
+  [1m[36m (35.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (317.8ms)[0m  INSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Wed, 24 Jul 2013 16:12:32 UTC +00:00], ["status", "check-in"], ["updated_at", Wed, 24 Jul 2013 16:12:32 UTC +00:00], ["vaga", "258147369"]]
+  [1m[36m (36.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mPhone Load (39.1ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+  [1m[36mClient Load (38.2ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mUser Load (38.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1
+  [1m[36mPhone Load (38.9ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (37.6ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (37.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (38.2ms)[0m  SELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mPhone Load (38.7ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (38.2ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (37.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mPhone Load (39.0ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+  [1m[36mClient Load (38.0ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mUser Load (38.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (38.5ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" INNER JOIN "client" ON "total_amounts"."client_id" = "client"."id_client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mClient Load (38.0ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (37.7ms)[0m  [1mSELECT "total_amounts".* FROM "total_amounts" WHERE "total_amounts"."client_id" = 19 LIMIT 1[0m
+  [1m[35m (37.6ms)[0m  BEGIN
+  [1m[36mSQL (38.8ms)[0m  [1mINSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount_at_instant", 22.87], ["client_id", 19], ["created_at", Wed, 24 Jul 2013 16:55:59 UTC +00:00], ["status", "check-in"], ["updated_at", Wed, 24 Jul 2013 16:55:59 UTC +00:00], ["vaga", "25871"]]
+  [1m[35m (38.2ms)[0m  COMMIT
+  [1m[36mPhone Load (44.9ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (37.6ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (38.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.6ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (52.2ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (53.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mTotalAmount Load (53.3ms)[0m  [1mSELECT "card_account".* FROM "card_account" LIMIT 1[0m
+  [1m[35mPhone Load (53.1ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+  [1m[36mClient Load (52.4ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mUser Load (53.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1
+  [1m[36mClient Load (51.7ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (53.6ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19 ORDER BY "card_account"."id_card_account" DESC LIMIT 1
+  [1m[36mTotalAmount Load (59.4ms)[0m  [1mSELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19[0m
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (38.8ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (38.6ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (39.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mClient Load (38.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (53.3ms)[0m  [1mSELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19 ORDER BY "card_account"."id_card_account" DESC LIMIT 1[0m
+  [1m[35mTotalAmount Load (53.2ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19
+  [1m[36mPhone Load (38.4ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (37.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (38.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mClient Load (38.0ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (51.8ms)[0m  [1mSELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19 ORDER BY "card_account"."id_card_account" DESC LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.4ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (52.7ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (51.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (52.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mClient Load (52.2ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mTotalAmount Load (43.6ms)[0m  [1mSELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19 ORDER BY "card_account"."id_card_account" DESC LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.3ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19 ORDER BY "card_account"."id_card_account" DESC LIMIT 1
+  [1m[36m (51.2ms)[0m  [1mBEGIN[0m
+  [1m[35mTotalAmount Load (52.5ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19 ORDER BY "card_account"."id_card_account" DESC LIMIT 1
+  [1m[36mSQL (191.3ms)[0m  [1mINSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "metodo", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["amount_at_instant", 21466.0], ["client_id", 19], ["created_at", Wed, 24 Jul 2013 20:17:59 UTC +00:00], ["metodo", "ura"], ["status", "check-in"], ["updated_at", Wed, 24 Jul 2013 20:17:59 UTC +00:00], ["vaga", "58"]]
+  [1m[35m (51.7ms)[0m  COMMIT
+  [1m[36mPhone Load (52.3ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (51.5ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1
+  [1m[36mUser Load (51.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1[0m
+  [1m[35mPhone Load (51.5ms)[0m  SELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1
+  [1m[36mClient Load (51.8ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mUser Load (57.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."client_id" = 19 LIMIT 1
+  [1m[36mClient Load (52.3ms)[0m  [1mSELECT "client".* FROM "client" WHERE "client"."id_client" = 19 LIMIT 1[0m
+  [1m[35mTotalAmount Load (52.9ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 19 ORDER BY "card_account"."id_card_account" DESC LIMIT 1
+  [1m[36mPhone Load (51.6ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (61.8ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 24 LIMIT 1
+  [1m[36mUser Load (58.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 24 LIMIT 1[0m
+  [1m[35mClient Load (52.3ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 24 LIMIT 1
+  [1m[36mTotalAmount Load (52.2ms)[0m  [1mSELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 24 ORDER BY "card_account"."id_card_account" DESC LIMIT 1[0m
+  [1m[35mTotalAmount Load (51.8ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 24 ORDER BY "card_account"."id_card_account" DESC LIMIT 1
+  [1m[36m (51.6ms)[0m  [1mBEGIN[0m
+  [1m[35mTotalAmount Load (52.0ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 24 ORDER BY "card_account"."id_card_account" DESC LIMIT 1
+  [1m[36mSQL (52.2ms)[0m  [1mINSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "metodo", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["amount_at_instant", 17233.0], ["client_id", 24], ["created_at", Wed, 24 Jul 2013 20:45:32 UTC +00:00], ["metodo", "ura"], ["status", "check-in"], ["updated_at", Wed, 24 Jul 2013 20:45:32 UTC +00:00], ["vaga", "12"]]
+  [1m[35m (51.5ms)[0m  COMMIT
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (29.5ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '62324270' LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (42.8ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'dlink' LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (45.0ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = 'dlink' LIMIT 1[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mPhone Load (37.5ms)[0m  [1mSELECT "phone".* FROM "phone" WHERE "phone"."phone" = '6232427098' LIMIT 1[0m
+  [1m[35mClient Load (30.4ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 23 LIMIT 1
+  [1m[36mUser Load (32.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."client_id" = 23 LIMIT 1[0m
+  [1m[35mClient Load (29.9ms)[0m  SELECT "client".* FROM "client" WHERE "client"."id_client" = 23 LIMIT 1
+  [1m[36mTotalAmount Load (31.7ms)[0m  [1mSELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 23 ORDER BY "card_account"."id_card_account" DESC LIMIT 1[0m
+  [1m[35mTotalAmount Load (31.3ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 23 ORDER BY "card_account"."id_card_account" DESC LIMIT 1
+  [1m[36m (29.1ms)[0m  [1mBEGIN[0m
+  [1m[35mTotalAmount Load (30.7ms)[0m  SELECT "card_account".* FROM "card_account" WHERE "card_account"."id_client" = 23 ORDER BY "card_account"."id_card_account" DESC LIMIT 1
+  [1m[36mSQL (96.1ms)[0m  [1mINSERT INTO "parking_validations" ("amount_at_instant", "client_id", "created_at", "metodo", "status", "updated_at", "vaga") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["amount_at_instant", 8000.0], ["client_id", 23], ["created_at", Mon, 29 Jul 2013 12:41:34 UTC +00:00], ["metodo", "ura"], ["status", "check-in"], ["updated_at", Mon, 29 Jul 2013 12:41:34 UTC +00:00], ["vaga", "2588"]]
+  [1m[35m (29.8ms)[0m  COMMIT
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+***** Debugger requested, but was not available (ensure the debugger gem is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+
+
+***** Debugger requested, but was not available (ensure the debugger gem is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+
+
+***** Debugger requested, but was not available (ensure the debugger gem is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+
+
+***** Debugger requested, but was not available (ensure the debugger gem is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+
+
+***** Debugger requested, but was not available (ensure the debugger gem is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+
+
+***** Debugger requested, but was not available (ensure the debugger gem is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+

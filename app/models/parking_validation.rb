@@ -1,13 +1,14 @@
 class ParkingValidation < ActiveRecord::Base
+  self.table_name = "parking_space_history"
   belongs_to :client
-  attr_accessible :vaga, :status, :amount_at_instant
+  
 
   before_create :get_amount_at_instant
 
   def get_amount_at_instant
-    current_user = self.client
-  	self.amount_at_instant = current_user.total_amount.amount
-  	
+    self.amount_at_instant = self.client.current_amount.seconds_amount
   end
 
+
+  
 end

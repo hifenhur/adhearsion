@@ -1,0 +1,42 @@
+class WebService
+  include HTTParty
+  base_uri 'http://demo2.xavante.net.br'
+  HASHCODE = "585de0eeca0d2ef8aa4d0aaa81d2a5fbeb4cb510e78e3f5002d7f2c724b44f80"
+
+  def self.phone(tel)
+    if req = self.post("/ura/phone.json", query: {phone: tel}).parsed_response
+      req.symbolize_keys
+    end
+    
+  end
+
+  def self.client(id)
+      req = self.post("/ura/user.json", query: {id: id}).parsed_response
+      if req.is_a? Hash
+        req.symbolize_keys
+      else
+        return nil
+      end
+  end
+
+  def self.current_amount(client_id)
+      req = self.post("/ura/current_amount.json", query: {client_id: client_id}).parsed_response
+      if req.is_a? Hash
+        req.symbolize_keys
+      else
+        return nil
+      end
+  end
+
+  def self.reserve_vacancy(client_id, vaga, phone)
+      req = self.post("/and_estacionamento/debit.json", query: {phone: phone, client: client_id, hash: HASHCODE, vaga: vaga, metodo: 'ura'}).parsed_response
+      if req.is_a? String
+        false
+      else
+        req
+      end
+  end
+
+  
+  
+end

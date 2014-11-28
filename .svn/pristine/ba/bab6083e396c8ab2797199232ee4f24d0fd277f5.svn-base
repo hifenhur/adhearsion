@@ -1,0 +1,35 @@
+# encoding: utf-8
+require 'sound_helper'
+
+class Home < Adhearsion::CallController
+  include SoundHelper
+  attr_accessor :user
+
+  def run
+    tel_number = call[:x_agi_callerid]
+    if call[:x_agi_callerid] == "sip-phone"
+      call[:x_agi_callerid] = "6232427098"
+      tel_number = "6232427098"
+    end
+    
+    phone = Phone.new(WebService.phone(tel_number))
+    
+    answer
+    if phone.id
+      self.user = Client.new(WebService.client(phone.id_client))
+    else
+      play "nao-registrado"
+      hangup
+    end
+        
+    invoke Saldo, {:user => self.user}
+    invoke EscolherVaga, {:user => self.user}
+
+  end
+
+  
+
+  
+
+ 
+end

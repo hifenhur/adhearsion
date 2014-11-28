@@ -1,0 +1,42 @@
+>> Writing PID to tmp/pids/thin.3001.pid
+>> Using rack adapter
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3001, CTRL+C to stop
+>> Exiting!
+/usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/backends/tcp_server.rb:16:in `connect': cannot load such file -- thin/connection (LoadError)
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/backends/base.rb:55:in `block in start'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `call'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/server.rb:159:in `start'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/controllers/controller.rb:86:in `start'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/runner.rb:187:in `run_command'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/runner.rb:152:in `run!'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/bin/thin:6:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/bin/thin:23:in `load'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/bin/thin:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/bin/ruby_noexec_wrapper:14:in `eval'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/bin/ruby_noexec_wrapper:14:in `<main>'
+>> Writing PID to tmp/pids/thin.3001.pid
+>> Using rack adapter
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3001, CTRL+C to stop
+>> Exiting!
+/usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/backends/tcp_server.rb:16:in `connect': cannot load such file -- thin/connection (LoadError)
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/backends/base.rb:55:in `block in start'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `call'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/backends/base.rb:63:in `start'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/server.rb:159:in `start'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/controllers/controller.rb:86:in `start'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/runner.rb:187:in `run_command'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/lib/thin/runner.rb:152:in `run!'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/gems/thin-1.5.1/bin/thin:6:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/bin/thin:23:in `load'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/bin/thin:23:in `<main>'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/bin/ruby_noexec_wrapper:14:in `eval'
+	from /usr/local/rvm/gems/ruby-1.9.3-head/bin/ruby_noexec_wrapper:14:in `<main>'

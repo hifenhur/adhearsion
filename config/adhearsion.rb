@@ -2,20 +2,8 @@
 
 Adhearsion.config do |config|
 
-  # Centralized way to specify any Adhearsion platform or plugin configuration
-  # - Execute rake config:show to view the active configuration values
-  #
-  # To update a plugin configuration you can write either:
-  #
-  #    * Option 1
-  #        Adhearsion.config.<plugin-name> do |config|
-  #          config.<key> = <value>
-  #        end
-  #
-  #    * Option 2
-  #        Adhearsion.config do |config|
-  #          config.<plugin-name>.<key> = <value>
-  #        end
+  
+
 
   config.development do |dev|
     dev.platform.logging.level = :debug
@@ -33,15 +21,23 @@ Adhearsion.config do |config|
    config.punchblock.platform = :asterisk # Use Asterisk
    config.punchblock.username = "myuser" # Your AMI username
    config.punchblock.password = "mypassword" # Your AMI password
-   config.punchblock.host = "200.98.128.101" # Your AMI host
-   
+   config.punchblock.host = "localhost" # Your AMI host
 
-  ##
-  # Use with FreeSWITCH
-  #
-  # config.punchblock.platform = :freeswitch # Use FreeSWITCH
-  # config.punchblock.password = "" # Your Inbound EventSocket password
-  # config.punchblock.host = "127.0.0.1" # Your IES host
+   config.platform.environment = :development
+
+ 
+   # ******* Configuration for reporter **************
+
+  # The Airbrake/Errbit API key [AHN_REPORTER_API_KEY]
+  config.reporter.api_key                 = "2d07c76a8f454f06f5a701b7faab3848"
+
+  # The class that will act as the notifier. Built-in classes are Adhearsion::Reporter::AirbrakeNotifier and Adhearsion::Reporter::NewrelicNotifier [AHN_REPORTER_NOTIFIER]
+  config.reporter.notifier                = Adhearsion::Reporter::AirbrakeNotifier
+
+  # Base URL for notification service [AHN_REPORTER_URL]
+  config.reporter.url                     = "http://errbit-xavante.herokuapp.com"
+
+ 
 end
 
 Adhearsion::Events.draw do
@@ -62,11 +58,11 @@ end
 
 Adhearsion.router do
 
-  #openended do
-  #  route 'ConsoleCatch' do
-  #    logger.info "Call #{call.id} waiting..."
-  #  end
-  #end
+#  openended do
+#    route 'ConsoleCatch' do
+#      logger.info "Call #{call.id} waiting..."
+#    end
+#  end
   route 'default', Home
 end
 

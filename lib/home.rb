@@ -1,40 +1,58 @@
 # encoding: utf-8
+require 'sound_helper'
 
 class Home < Adhearsion::CallController
-
+  include SoundHelper
   attr_accessor :user
+  attr_accessor :route
 
   def run
-    answer
-    user_exist = false
-    while !user_exist
-      @codigo = ask 'codigo-fem', :timeout => 10, :limit => 1
-      if verifica_usuario(@codigo)
-        user_exist = true
-      end
+    tel_number = call[:x_agi_callerid]
+    if call[:x_agi_callerid] == "sip-ura"
+      call[:x_agi_callerid] = "6282550465"
+      tel_number = "6282550465"
     end
 
-    menu "menu-principal", :tries => 2, :timeout => 10 do
-      match 1 do 
-      pass Saldo, {:user => self.user}
-      end
-      match 2, EscolherVaga
+    
+    begin
+      answer
+      phone = Phone.new(WebService.phone(tel_number))
+      self.user = Client.new(WebService.client(phone.id_client))  
+      
+    rescue Exception => e
+      raise e
     end
+    
+      
+    
+    
+    #Rotas
+    # 1 - Checkin
+    # 2 - Checkout
+    self.route = ask 'escolher_checkin_ou_checkout', :timeout => 5, :limit => 1
+    self.route  = self.route.to_s.to_i
+    20.times do 
+      logger.debug(self.route)
+    end
+    
+    if self.route == 1
+      invoke Saldo, {:user => self.user}
+      invoke EscolherVaga, {:user => self.user}
+    elsif self.route == 2
+      invoke Checkout, {:user => self.user}
+    else
+      invoke Home
+    end
+
+    
+    
+    
 
   end
 
   
 
-  def verifica_usuario(codigo)
-    @codigo = @codigo.response.to_i
-    
-    if self.user = User.where(:id => @codigo).first
-      return true
-    else
-      play 'codigo-incorreto'
-      return false
-    end
-  end
+  
 
  
 end

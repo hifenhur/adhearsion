@@ -1,31 +1,61 @@
 # encoding: utf-8
 require 'sound_helper'
 class Saldo < Adhearsion::CallController
-  extend SoundHelper
+  include SoundHelper
   attr_accessor :user
 
   def run
-    amount = metadata[:user].total_amount.amount
-    if amount.to_i > 0
-      saldo = amount.to_s.split('.')
-      saldo_reais = "numero-#{saldo[0]}"
-      Saldo.criar_som("#{saldo[0]}", saldo_reais)
-      saldo_centavos = "numero-#{saldo[1]}"
-      if saldo[1].length == 1
-        saldo[1][1] = '0'
-      end
-      Saldo.criar_som("#{saldo[1]}", saldo_centavos)
+    amount = nil
+    2.times do 
+      amount = TotalAmount.new(WebService.current_amount(metadata[:user].id)).seconds_amount
+    end
+    saldo_segundos = amount
+    if saldo_segundos > 0
+      
+      tempo = format_time(saldo_segundos).split(":")
+      horas = tempo[0].to_i.to_extenso
+      minutos = tempo[1].to_i.to_extenso
 
-      play 'voce-tem'
-      play saldo_reais
-      play 'reais-e'
-      play saldo_centavos
-      play 'centavos'
-      pass VoltarHome
+      play "beep"
+      play "voce-tem"
+      
+
+      horas.parameterize.gsub("-", " ").split(" ").each do |numero|
+         play numero
+      end
+      sleep 1
+      play "horas"
+
+      play "e"
+
+      minutos.parameterize.gsub("-", " ").split(" ").each do |numero|
+         play numero
+      end
+      play "minutos"
+
     else
       play 'sem-saldo'
-      pass VoltarHome
+      hangup
     end	    
 	
   end
+  
+  def format_time (timeElapsed)
+ 
+    @timeElapsed = timeElapsed.to_i
+ 
+    #find the seconds
+    seconds = @timeElapsed % 60
+ 
+    #find the minutes
+    minutes = (@timeElapsed / 60) % 60
+ 
+    #find the hours
+    hours = (@timeElapsed/3600)
+ 
+    #format the time
+ 
+    return hours.to_s + ":" + format("%02d",minutes.to_s) + ":" + format("%02d",seconds.to_s)
+  end
+  
 end
